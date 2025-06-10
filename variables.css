@@ -1,0 +1,49 @@
+:root {
+  /* Colors */
+  --color-primary: #7c42da;
+  --color-secondary: #4f46e5;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text-primary: #1e293b;
+  --color-text-secondary: #64748b;
+  --color-text-light: #94a3b8;
+  --color-border: #e2e8f0;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+  /* Typography */
+  --font-family: Inter, system-ui, -apple-system, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+
+  /* Node Colors */
+  --node-input-bg: #e0f2fe;
+  --node-llm-bg: #fef3c7;
+  --node-output-bg: #dcfce7;
+  --node-text-bg: #f3e8ff;
+  --node-image-bg: #f0f8ff;
+  --node-transform-bg: #f5f5f5;
+  --node-api-bg: #e6ffe6;
+  --node-cache-bg: #fff0f0;
+  --node-validator-bg: #f0f0ff;
+}

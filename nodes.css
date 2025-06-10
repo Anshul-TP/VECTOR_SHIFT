@@ -1,0 +1,256 @@
+.node {
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  max-width: 300px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 24px;
+  font-family: "Inter", sans-serif;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.node:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.node-title {
+  font-weight: 600;
+  color: var(--color-text);
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px 16px 0 0;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: "Poppins", sans-serif;
+  z-index: 2;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.node-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  padding: 8px 4px;
+}
+
+.node-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85em;
+  color: var(--color-text-secondary);
+  width: 100%;
+  font-weight: 500;
+}
+
+.node-input,
+.node-select,
+.node-textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-primary);
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.node-input:focus,
+.node-select:focus,
+.node-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 0 2px rgba(124, 66, 218, 0.2);
+}
+
+.node-input:hover,
+.node-select:hover,
+.node-textarea:hover {
+  border-color: rgba(124, 66, 218, 0.5);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Node type specific styles with glass effect */
+.node-input {
+  background: rgba(240, 249, 255, 0.7);
+}
+.node-llm {
+  background: rgba(254, 243, 199, 0.7);
+}
+.node-output {
+  background: rgba(220, 252, 231, 0.7);
+}
+.node-text {
+  background: rgba(243, 232, 255, 0.7);
+}
+.node-image {
+  background: rgba(240, 253, 250, 0.7);
+}
+.node-transform {
+  background: rgba(248, 250, 252, 0.7);
+}
+.node-api {
+  background: rgba(240, 253, 244, 0.7);
+}
+.node-cache {
+  background: rgba(255, 247, 237, 0.7);
+}
+.node-validator {
+  background: rgba(245, 243, 255, 0.7);
+}
+
+/* Handle styles */
+.react-flow__handle {
+  width: 10px;
+  height: 10px;
+  background: var(--color-primary);
+  border: 2px solid var(--color-surface);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 1000;
+  transition: all 0.2s ease;
+}
+
+.react-flow__handle:hover {
+  background: var(--color-primary-dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.2);
+}
+
+.react-flow__handle-left {
+  left: -5px;
+}
+.react-flow__handle-right {
+  right: -5px;
+}
+
+/* Text node specific styles */
+.node-text .node-textarea {
+  min-height: 100px;
+  max-height: 300px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+/* Cache node specific styles */
+.ttl-input-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.ttl-input-group .ttl-input {
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.ttl-input-group .ttl-unit {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.ttl-input::-webkit-inner-spin-button,
+.ttl-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.ttl-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Variable controls */
+.variable-controls {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.variable-controls .node-input {
+  flex: 1;
+  min-width: 0;
+}
+
+.node-button {
+  padding: 8px 16px;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-family: "Inter", sans-serif;
+}
+
+.node-button:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.node-button:active {
+  transform: translateY(0);
+}
+
+.node-remove-button {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ff4444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.node:hover .node-remove-button {
+  opacity: 1;
+}
+
+.node-remove-button:hover {
+  background: #ff0000;
+  transform: scale(1.1);
+}
